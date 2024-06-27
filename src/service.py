@@ -37,6 +37,5 @@ def calculate_deposit(data: SDepositParams) -> Dict[str, Union[float, int]]:
     print(amount, data.rate)
     for p in range(data.periods):
         amount = amount + amount * (data.rate / 1200)
-        dates[date_add_months(data.date, p)] = float(format(amount, '.2f'))
+        dates[date_add_months(data.date, p)] = float(format(amount, ".2f"))
     return dates
-

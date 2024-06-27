@@ -6,9 +6,7 @@ from fastapi.responses import JSONResponse
 from schemas import SDepositParams
 from service import calculate_deposit
 
-app = FastAPI(
-    title="Deposit App"
-)
+app = FastAPI(title="Deposit App")
 
 
 @app.exception_handler(RequestValidationError)
